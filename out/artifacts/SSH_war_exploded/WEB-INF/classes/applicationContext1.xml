@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans        
+ 	             http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	       		 http://www.springframework.org/schema/context        		 
+ 	             http://www.springframework.org/schema/context/spring-context.xsd
+ 	       		 http://www.springframework.org/schema/tx 
+ 	       		 http://www.springframework.org/schema/tx/spring-tx.xsd
+ 	       		 http://www.springframework.org/schema/aop 
+ 	       		 http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!-- 1 配置SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 加载hibernate核心配置文件 -->
+		<property name="configLocation" value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	<!-- 2 配置hibernate模板 -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<!-- 通过工厂获得session，操作PO类 -->
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!--配置ClassesAction-->
+	<bean id="ClassAction" class="action.ClassAction" scope="prototype">
+        <property name="classesService" ref="classesService"></property>
+	</bean>
+    <bean id="StudentAction" class="action.StudentAction" scope="prototype">
+		<property name="studentService" ref="studentService"></property>
+    </bean>
+
+	<!-- 3 配置dao -->
+	<bean id="classesDao" class="dao.impl.ClassesDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate">
+		</property>
+	</bean>
+	<bean id="studentDao" class="dao.impl.StudentDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate">
+		</property>
+	</bean>
+
+	<!-- 4 配置service -->
+	<bean id="classesService" class="service.impl.ClassesServiceImpl">
+		<property name="classesDao" ref="classesDao"></property>
+	</bean>
+
+	<bean id="studentService" class="service.impl.StudentServiceImpl">
+		<property name="studentDao" ref="studentDao"></property>
+	</bean>
+
+
+	<!-- 事务管理 -->
+	<!-- #1 事务管理器,就是平台，spring工具产生，依赖于使用 持久方案（hibernate、jdbc等） -->
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- #2 通知：增强事务 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="save*" />
+			<tx:method name="update*" />
+			<tx:method name="delete*" />
+			<tx:method name="find*" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- #3 切面：将切入点 与 通知 关联 -->
+	<aop:config>
+		<aop:advisor advice-ref="txAdvice"
+			pointcut="execution(* service..*.*(..))" />
+	</aop:config>
+
+</beans>

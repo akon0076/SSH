@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/config" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/config/applicationContext.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/applicationContext1.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/c3p0-db.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/hibernate.cfg.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/log4j.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/struts.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/action/ClassAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/action/EmployeeAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/action/FileUploadAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/action/SimpleDownLoad2Action.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/action/StudentAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/action/UserLoginAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/config" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/dao/EmployeeDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/dao/impl/ClassesDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/dao/impl/StudentDaoImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Classes.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Customer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Employee.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/Student.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/entity/User.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/hibernate.cfg.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/interceptor/PrivilegeInterceptor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/struts.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/com.springsource.com.mchange.v2.c3p0-0.9.1.2.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/com.springsource.org.aopalliance-1.0.0.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.2.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-aop-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-aspects-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-beans-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-context-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-core-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-expression-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-jdbc-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-orm-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-test-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-tx-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/spring-web-3.2.2.RELEASE.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib/struts2-spring-plugin-2.3.24.jar" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+  <package name="hello" extends="struts-default">
+
+    <action name="studentList" class="StudentAction" method="List">
+        <result name="list">/studentMMT/student.jsp</result>
+    </action>
+
+	  <action name="addClass" class="ClassAction" method="addClass">
+          <result name="success">/studentMMT/operation.jsp</result>
+	  </action>
+
+      <action name="addStudent" class="StudentAction" method="addStudent">
+          <result name="success">/studentMMT/operation.jsp</result>
+      </action>
+
+      <action name="toAddStudent" class="StudentAction" method="toAddStudent">
+          <result name="toAddStudent">/studentMMT/addStudent.jsp</result>
+      </action>
+
+      <action name="getSingleClass" class="ClassAction" method="getSingleClass">
+          <result name="ToUpdate">/studentMMT/updateClass.jsp</result>
+      </action>
+
+      <action name="getSingleStudent" class="StudentAction" method="getSingleStudent">
+          <result name="ToUpdate">/studentMMT/updateStudent.jsp</result>
+      </action>
+
+      <action name="updateClass" class="ClassAction" method="updateClass">
+          <result name="success">/studentMMT/operation.jsp</result>
+      </action>
+
+      <action name="updateStudent" class="StudentAction" method="updateStudent">
+          <result name="success">/studentMMT/operation.jsp</result>
+      </action>
+
+      <action name="removeClass" class="ClassAction" method="removeClass">
+          <result name="success">/studentMMT/operation.jsp</result>
+      </action>
+
+      <action name="removeStudent" class="StudentAction" method="removeStudent">
+          <result name="success">/studentMMT/operation.jsp</result>
+      </action>
+
+      <action name="searchStudent" class="StudentAction" method="searchStudent">
+          <result name="search">/studentMMT/student.jsp</result>
+      </action>
+	
+  </package>
+</struts>
